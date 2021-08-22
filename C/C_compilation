@@ -1,0 +1,34 @@
+C compilation behind the scenes
+
+This file briefs how a ".c" is complied and gives some insights about the steps involved in it.
+
+command to compile a .c file is " gcc filename.c " / "gcc filename.c -o filename_of_executable"
+
+when we use above commands we get a ".out" file which is an executable. But, compilation is not that simple.
+
+There are various steps involved in compiling a ".c" file.
+They are : 
+
+1) Pre-processing
+2) Comilation
+3) Assembly
+4) Linking
+
+After every step, a new file is created. Like ".i".".o",".s" and ".out"
+to get this files " $gcc –Wall –save-temps filename.c –o filename "
+
+1) PRE-PROCESSING : "This step outputs the ".i" file which contains the pre-processed output of the .c file"
+	During this phase,1) comments are removed from the source code,
+			  2) Macros are expanded, such as a) #define a = 10, so that every "a" variable in the source code is replaced by 10 
+							  b) #define add(a,b) (a+b) , every use of function "add" replaced by "a+b".....
+			  3) Include statements are expanded. Such as "#include <>". You can check this by viewing the "filename.i" where you will find out that inlude statements are not
+			     there. Insted you will findout huge text. This is the expansion of the "include" statements.
+			  4) Conditional compilation - selecting which conditional codes to be compiled. Don't get confused with the term conditional codes. It doesn't mean the run time
+			     conditional statements like "if, else, elseif ...". It checks for the statements like "debug, version, static if".
+
+2) COMPILING : "This step is to compile filename.i and produce an; intermediate compiled output ".s" file. This file is in assembly level instructions". .S files are source code files written in assembly. Assembly is an extremely low-level form of programming. The files contain assembly instructions to the processor in sequential order and are typically compiled based on a selected architecture
+
+3) ASSEMBLY : " '.s' file is taken as input and turned into '.o' by assembler". During this step the .S file is converted to machine-level instrctions so that the operating system can execute the program.
+
+4)LINKING : ".o (object file) is taken as input and a '.out' executable file ""
+		During this step, functions are linked to their definitions.
