@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-<!DOCTYPE html>
+``<!DOCTYPE html>
 <html>
 <body>
 
@@ -12,7 +12,7 @@
 <h6>Heading 6</h6>
 
 </body>
-</html>
+</html>``
 
 You can use the [editor on GitHub](https://github.com/premsai1503/premsai1503.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
