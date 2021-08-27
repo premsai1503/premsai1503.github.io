@@ -396,7 +396,7 @@ body:not(.user-is-tabbing) a:focus {
 .nav__link:hover::after {
     right: 0;
     height: 2px;
-    background: var(--pink);
+    background: var(--white);
 }
 
 /* --------------------------------------- */
